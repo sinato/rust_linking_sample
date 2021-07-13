@@ -29,6 +29,9 @@ clean:
 	$(target_dir)/libfunc.bc \
 	$(target_dir)/libfunc.o \
 	$(target_dir)/libfunc.a
+	cargo clean --manifest-path func/Cargo.toml
+	cargo clean --manifest-path call/Cargo.toml
+
 
 .PHONY: build-lib clean-lib
 build-lib: libfunc.a
