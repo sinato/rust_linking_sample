@@ -42,4 +42,5 @@ clean-lib:
 
 .PHONY: run
 run: clean-lib build-lib
+	LD_LIBRARY_PATH=${CURDIR}/func/target/debug \
 	cargo run --manifest-path call/Cargo.toml
